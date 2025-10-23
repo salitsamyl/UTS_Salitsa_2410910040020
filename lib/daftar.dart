@@ -72,7 +72,32 @@ class _DaftarState extends State<Daftar> {
                 border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(15)))
               ),
             ),
-            
+            Center(
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 58,
+                    child: ElevatedButton (onPressed:(){
+                    Navigator.pushNamed(context, '/menu');
+                    } , 
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 67, 94, 116), // warna biru tua seperti di gambar
+                        iconSize: 20,
+                    ),
+                    child: Text("Daftar", style: TextStyle(color: Colors.white),)),
+                  ),
+                ),
+                
+        
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Belum punya akun?"),
+                    TextButton(onPressed: (){
+                        Navigator.pushNamed(context, '/');
+                    }, child: Text("Login di sini", style: TextStyle(color: Colors.blue),)),
+                  ],
+              ),
             ],
           ),
           ),
