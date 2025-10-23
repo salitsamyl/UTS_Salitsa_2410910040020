@@ -15,11 +15,25 @@ class _LoginState extends State<Login> {
         padding: EdgeInsetsGeometry.all(8),
         child: Column(
           children: [
-            Row(
-              children: [
-                Positioned(child: Image.asset("gambar/Logo.png"))
-              ],
-            )
+            Padding(
+              padding: const EdgeInsets.only(left: 90, top: 20),
+              child: Row(
+                children: [
+                  Positioned(
+                    child: Image.asset("gambar/Logo.png", width: 140,)),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text("LKS", style: TextStyle(fontWeight: FontWeight.bold, color: const Color.fromARGB(255, 74, 115, 186), fontSize: 45), ),
+                        Text("MART", style: TextStyle(fontWeight: FontWeight.bold, color:const Color.fromARGB(255, 74, 115, 186), fontSize: 45), ),
+                      ],
+                    )
+                ],
+              ),
+            ),
+
+            Text("Sign In", style: TextStyle(fontWeight: FontWeight.bold),)
           ],
         ),
         ),
