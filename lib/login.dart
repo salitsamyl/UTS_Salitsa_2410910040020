@@ -9,7 +9,8 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   @override
-  bool _pass
+  bool _pass = true;
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
@@ -53,15 +54,16 @@ class _LoginState extends State<Login> {
                 ),
                 Text("Password", style: TextStyle(fontWeight: FontWeight.bold),),
                 TextField(
+                  obscureText: _pass,
                   decoration: InputDecoration(
                     hint: Text("Min. 8 characters"),
                     border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(15))),
                     suffixIcon: IconButton(onPressed: (){
                       setState(() {
-                        
-                        });
-                      },
-                    ),
+                        _pass = !_pass;
+                      });
+                    }, 
+                    icon: Icon(_pass? Icons.remove_red_eye : Icons.visibility_off))
                   ),
                 )
               ],
