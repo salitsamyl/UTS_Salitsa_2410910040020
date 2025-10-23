@@ -75,9 +75,20 @@ class _LoginState extends State<Login> {
                     Text("Keep me logged in"),
                   ],
                 ),
-                ElevatedButton (onPressed:(){
-                  Navigator.pushNamed(context, "/menu");
-                } , child: Text("Login"))
+                Center(
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 58,
+                    child: ElevatedButton (onPressed:(){
+                      
+                    } , 
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 67, 94, 116), // warna biru tua seperti di gambar
+                        iconSize: 20,
+                    ),
+                    child: Text("Login")),
+                  ),
+                )
               ],
             ),
             ),
