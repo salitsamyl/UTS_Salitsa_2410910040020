@@ -65,7 +65,19 @@ class _LoginState extends State<Login> {
                     }, 
                     icon: Icon(_pass? Icons.remove_red_eye : Icons.visibility_off))
                   ),
-                )
+                ),
+                
+                SizedBox(height: 20,),
+                Row(
+                  spacing: 8,
+                  children: [
+                    Icon(Icons.check_box_outline_blank),
+                    Text("Keep me logged in"),
+                  ],
+                ),
+                ElevatedButton (onPressed:(){
+                  Navigator.pushNamed(context, "/menu");
+                } , child: Text("Login"))
               ],
             ),
             ),
