@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uts_salitsa_2410910040020/daftar.dart';
 import 'package:uts_salitsa_2410910040020/login.dart';
 import 'package:uts_salitsa_2410910040020/menu.dart';
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       routes: {
       '/': (context) => const Login(),
       "/menu" :(context)=>Menu(),
+      "/daftar" :(context)=>Daftar(),
       },
       initialRoute: "/",
 

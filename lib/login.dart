@@ -90,13 +90,15 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 
-                SizedBox(height: 20,),
+        
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Belum punya akun?"),
                     TextButton(onPressed: (){
                         Navigator.pushNamed(context, '/daftar');
-                    }, child: Text("Daftar di sini"))
+                    }, child: Text("Daftar di sini", style: TextStyle(color: Colors.blue),))
                   ],
                 )
               ],
