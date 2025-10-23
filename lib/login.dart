@@ -80,14 +80,24 @@ class _LoginState extends State<Login> {
                     width: double.infinity,
                     height: 58,
                     child: ElevatedButton (onPressed:(){
-                      
+                    Navigator.pushNamed(context, '/menu');
                     } , 
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Color.fromARGB(255, 67, 94, 116), // warna biru tua seperti di gambar
                         iconSize: 20,
                     ),
-                    child: Text("Login")),
+                    child: Text("Login", style: TextStyle(color: Colors.white),)),
                   ),
+                ),
+                
+                SizedBox(height: 20,),
+                Row(
+                  children: [
+                    Text("Belum punya akun?"),
+                    TextButton(onPressed: (){
+                        Navigator.pushNamed(context, '/daftar');
+                    }, child: Text("Daftar di sini"))
+                  ],
                 )
               ],
             ),
